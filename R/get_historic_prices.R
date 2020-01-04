@@ -32,5 +32,5 @@ fetch_historic_prices <- function(symbol) {
 #'
 #'
 get_historic_prices <- function(symbol) {
-  suppressWarnings(dplyr::bind_rows(lapply(symbol, FUN = fetch_historic_prices)))
+  suppressWarnings(dplyr::bind_rows(pbapply::pblapply(symbol, FUN = fetch_historic_prices)))
 }
