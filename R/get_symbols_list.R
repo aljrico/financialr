@@ -13,12 +13,13 @@
 #'
 #'
 #'
-get_symbols_list <- function(){
+get_symbols_list <- function() {
   url <- glue::glue("https://financialmodelingprep.com/api/v3/company/stock/list")
-  url %>%
+  content <- url %>%
     httr::GET() %>%
-    httr::content() %>%
-    .$symbolsList %>%
-    sapply(., FUN = function(x) x$symbol)
-}
+    httr::content()
 
+  symbolsList <- content$symbolsList
+
+  sapply(symbolsList, FUN = function(x) x$symbol)
+}

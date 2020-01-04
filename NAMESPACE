@@ -3,5 +3,7 @@
 export("%>%")
 export(get_balance_sheet_statement)
 export(get_cash_flow_statement)
+export(get_historic_prices)
 export(get_income_statement)
+export(get_symbols_list)
 importFrom(magrittr,"%>%")
