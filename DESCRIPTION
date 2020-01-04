@@ -15,14 +15,10 @@ Imports:
     dplyr,
     glue,
     httr,
-    jsonlite,
-    xml2,
-    rvest,
     stringr,
     lubridate,
     magrittr,
     readr,
-    methods,
     tibble,
     pbapply
 RoxygenNote: 7.0.2
